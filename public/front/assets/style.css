@@ -1,0 +1,923 @@
+header {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./photo/maldivler-hakkinda-bilgiler.jpg);
+    background-size: cover;
+
+}
+
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı şəffaf bir qara qat */
+    z-index: 1;
+}
+
+header * {
+    position: relative;
+    z-index: 2;
+}
+
+.mainnavbar{
+    top: 0;
+}
+.altnavbar{
+    top: 70px;
+}
+
+.mainnavbar,
+.altnavbar {
+    position: fixed;
+
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgb(48, 89, 165);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-navbar h1 {
+    color: white;
+}
+
+.left-navbar,
+.center-navbar,
+.right-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left-navbar,
+.right-navbar {
+    width: 20%;
+}
+
+.center-navbar {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-navbar ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.center-navbar a,
+.altnavbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.pp img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.navbarmenuicon {
+    color: white;
+    display: none;
+    font-size: 22px;
+}
+
+.altnavbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(89, 65, 65);
+    display: none;
+}
+
+.altnavbar ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.altnavbar ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.altnavbar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.travelhub {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 150px; /* Navbar-ın hündürlüyü qədər boşluq əlavə edin */
+}
+
+.travelhub h1,
+.travelhub h2,
+.travelhub h3 {
+    color: white;
+}
+
+.centertravel {
+    width: 69%;
+}
+
+.centertravel h2 {
+    font-size: 30px;
+}
+
+.centertravel h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.centertravel h3 {
+    font-size: 25px;
+    text-align: end;
+    margin-top: 60px;
+}
+
+.right-travel {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+}
+.swiper {
+    width: 150px;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Ortaya hizalamaq üçün */
+}
+
+.search-menu ul {
+    display: flex;
+    gap: 25px;
+}
+
+.search-menu li {
+    list-style: none;
+}
+
+.search-menu a {
+    text-decoration: none;
+    color: white;
+    position: relative; /* Alt xətti düzgün yerləşdirmək üçün */
+    padding-bottom: 5px; /* Xətt ilə mətn arasında məsafə */
+}
+
+.search-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Xəttin qalınlığı */
+    background-color: white; /* Xəttin rəngi */
+    transform: scaleX(0); /* Başlanğıcda xəttin görünməməsi */
+    transform-origin: bottom right; /* Xəttin sol tərəfdən sağa doğru böyüməsi */
+    transition: transform 0.3s ease; /* Xəttin görünmə animasiyası */
+}
+
+.search-menu a:hover::after,
+.search-menu a:focus::after,
+.search-menu a:active::after {
+    transform: scaleX(1); /* Xəttin tam görünməsi */
+}
+
+
+
+.ticket-search {
+    width: 80%;
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-search h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-form .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+.fortourrespo{
+    display: flex;
+    gap: 15px;
+}
+
+.search-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.search-form select, .search-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+#price-result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* popular categories */
+
+
+
+.popular-categories {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorative-title {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    padding: 0.5rem;
+    font-weight: bolder;
+}
+
+.decorative-title::before, .decorative-title::after {
+    content: '“'; /* Unicode character for left double quotation mark */
+    font-size: 2.5rem;
+    color: #000;
+    position: absolute;
+    top: -0.5rem; /* Adjust as needed */
+}
+
+.decorative-title::after {
+    content: '”'; /* Unicode character for right double quotation mark */
+    right: -1.5rem; /* Adjust as needed */
+    top: 1rem; /* Adjust as needed */
+}
+
+.decorative-title::before {
+    left: -1.5rem; /* Adjust as needed */
+    top: 1rem; /* Adjust as needed */
+}
+
+.popular-alt {
+    width: 80%;
+}
+
+.popular-categories h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.category-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.category {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.category-active {
+    border-bottom: 2px solid blue;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.tour {
+    width: 24%;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Space between tours */
+}
+
+.tour img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.favorite-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: black; /* Başlangıç rengi */
+    transition: color 0.3s;
+}
+
+.favorite-icon.favorited {
+    color: red; /* Tıklanmış rengi */
+}
+
+
+/* gizli pencere */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slide-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tour {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tour img {
+    width: 100%;
+    height: auto;
+}
+
+.favorite-icon {
+    font-size: 24px;
+    color: red;
+}
+
+.info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.close-btn {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.slide-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slide-buttons button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slide-buttons button:hover {
+    background: #0056b3;
+}
+
+
+/* gizli pencere */
+/* ikinci slayder */
+.swiper {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+}
+
+.swiper-slide {
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    font-size: 18px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.swipalt{
+    width: 100%;
+    height: 300px;
+    height: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.swipspan{
+    text-align: start;
+    display: block;
+}
+.swipspan .fa-solid{
+    color: blue;
+}
+.fa-regular{
+    color: white;
+
+}
+.swiper-slide a{
+    width: 33%;
+    height: 300px;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/* ikinci slayder finish */
+/* swip contr start */
+.contr {
+    margin-top: 150px;
+    width: 100%;
+    background-color: rgb(229,233,242);
+    height: auto;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.contr a{
+    text-decoration: none;
+    color: black;
+}
+
+.contrs{
+    display: flex;
+    gap: 2%;
+    padding: 3%;
+}
+.contr1{
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 5px;
+
+}
+.contr1 img{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contr h2{
+    text-align: start;
+    position: relative;
+    padding-left: 30px;
+}
+.contr h2::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 6px;
+    background-color:rgb(43,72,254);
+}
+
+.popular-ticket{
+    width: 100%;
+    height: 300px;
+    background-color: red;
+}
+.popular-ticket h1 {
+
+    text-align: center;
+    position: relative;
+    /* display: inline-block; */
+}
+
+.popular-ticket h1::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 6px;
+    background-color:rgb(43,72,254);
+    margin: 10px auto 0;
+}
+
+.forest {
+    position: relative;
+    margin-top: 150px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.forest::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./photo/ticket/Pura-Ulun-bank-Hindu-Bali-Indonesia-Lake.webp');
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.content p{
+    width: 50%;
+}
+.content form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.content input{
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+.content button{
+    width: 150px;
+    height: 52px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+}
+/* footer */
+/* Genel stil ayarları */
+
+/* Footer stil ayarları */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: #007BFF;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+.footer-section li{
+    margin-left: 5px;
+}
+
+.footer-section .social ul {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-section .social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsive Styles */
+
+
+@media (max-width: 480px) {
+    .decorative-title {
+        font-size: 1.5rem;
+    }
+
+    .category-nav {
+        font-size: 0.9rem;
+    }
+
+    .tour img {
+        height: 120px; /* Adjust image size for smaller screens */
+    }
+    .swiper-slide img {
+        display: none;
+
+    }
+    .content p{
+        width: 90%;
+    }
+
+    .content input{
+        width: 150px;
+    }
+    .content button{
+        width: 100px;
+    }
+    .content h1{
+        font-size: 30px;
+    }
+    .content form{
+        margin-top: 10px;
+    }
+}
+
+
+
+/* responsive */
+@media (max-width: 768px) {
+    .navbarmenuicon {
+        display: block;
+    }
+    .center-navbar{
+        display: none;
+    }
+    .altnavbar.active {
+        display: block;
+    }
+    .pp{
+        display: none;
+    }
+    .right-travel{
+        display: none;
+    }
+    .category-nav {
+        flex-direction: column;
+    }
+
+    .category {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .slide-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tour {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 10px 0; /* Vertical margin for better spacing */
+    }
+
+    .prev, .next {
+        display: none; /* Hide navigation buttons on mobile */
+    }
+    .fortourrespo{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .swiper-slide {
+        display: flex !important;
+        flex-direction: column;
+        gap: 30px;
+
+    }
+    .swiper-slide a{
+        width: 80%;
+        height: 300px;
+        height: auto;
+        display: flex;
+        gap: 20px;
+        background: #1b798a;
+    }
+
+}
+
+@media (max-width: 1395px) {
+    .contrs{
+        flex-wrap: wrap;
+    }
+}
+
