@@ -627,37 +627,37 @@
     <div id="menublog" class="contr">
         <h2>POPULAR DESTINATIONS</h2>
         <div class="contrs">
-            <a href="afgan.html">
+            <a href="{{ route('afgan') }}">
                 <div class="contr1">
                     <img src="{{asset('front/assets/photo/countryflag/Flag-Afghanistan.webp')}}" alt="" />
                     <h3>Afghanistan</h3>
                 </div>
             </a>
-            <a href="turkey.html">
+            <a href="{{ route('turkey') }}">
                 <div class="contr1">
                     <img src="{{asset('front/assets/photo/countryflag/Flag-Turkey.webp')}}" alt="" />
                     <h3>Turkey</h3>
                 </div>
             </a>
-            <a href="azer.html">
+            <a href="{{ route('azer') }}">
                 <div class="contr1">
                     <img src="{{asset('front/assets/photo/countryflag/Flag_of_Azerbaijan.svg.png')}}" alt="" />
                     <h3>Azerbaijan</h3>
                 </div>
             </a>
-            <a href="norvay.html">
+            <a href="{{ route('norvay') }}">
                 <div class="contr1">
                     <img src="{{asset('front/assets/photo/countryflag/Flag_of_Norway.svg.png')}}" alt="" />
                     <h3>Norway</h3>
                 </div>
             </a>
-            <a href="sweden.html">
+            <a href="{{ route('sweden') }}">
                 <div class="contr1">
                     <img src="{{asset('front/assets/photo/countryflag/Flag_of_Sweden.svg.png')}}" alt="" />
                     <h3>Sweden</h3>
                 </div>
             </a>
-            <a href="turkey.html">
+            <a href="{{ route('turkey') }}">
                 <div class="contr1">
                     <img src="{{asset('front/assets/photo/countryflag/Flag-Turkey.webp')}}" alt="" />
                     <h3>Turkey</h3>
@@ -671,7 +671,7 @@
         <h1 style="text-align: center;">Popular Tickets</h1>
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <a href="ticket.html">
+                <a href="{{ route('ticket') }}">
                     <div class="swipalt">
                         <img src="{{asset('front/assets/photo/maldiv.jpg')}}" alt="" />
                         <span class="swipspan">
@@ -683,7 +683,7 @@
                 </span>
                     </div>
                 </a>
-                <a href="ticket.html">
+                <a href="{{ route('ticket') }}">
                     <div class="swipalt">
                         <img src="{{asset('front/assets/photo/maldivler-hakkinda-bilgiler.jpg')}}" alt="" />
                         <span class="swipspan">
@@ -695,7 +695,7 @@
                 </span>
                     </div>
                 </a>
-                <a href="ticket.html">
+                <a href="{{ route('ticket') }}">
                     <div class="swipalt">
                         <img src="{{asset('front/assets/photo/ticket/bf25b4ad-eded-47a3-8fd4-08af2b1f9440.avif')}}" alt="" />
                         <span class="swipspan">

@@ -18,7 +18,8 @@
                 <div class="login">
                     @if(Auth::check())
                         <div class="pp">
-                            <img src="{{ asset('storage/app/public/avatars' . Auth::user()->avatar) }}" alt="Profil Fotoğrafı" />
+                            <img src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="Profil Fotoğrafı" />
+
                         </div>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
